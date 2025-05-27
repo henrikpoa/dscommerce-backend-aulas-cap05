@@ -13,8 +13,8 @@ FROM openjdk:17-jdk-slim
 
 EXPOSE 8080
 
-COPY --from=build /target/aula-0.0.1-SNAPSHOT app.jar
+COPY --from=build /target/* app.jar
 
-COPY aula-0.0.1-SNAPSHOT /app
+COPY * /app
 
 ENTRYPOINT [ "java", "-jar", "app.jar" ]
