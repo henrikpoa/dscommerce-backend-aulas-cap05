@@ -15,6 +15,6 @@ EXPOSE 8080
 
 COPY --from=build /target/aula-0.0.1-SNAPSHOT app.jar
 
-COPY app.jar .
+COPY aula-0.0.1-SNAPSHOT /app
 
 ENTRYPOINT [ "java", "-jar", "app.jar" ]
